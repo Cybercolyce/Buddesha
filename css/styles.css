@@ -1,0 +1,271 @@
+
+body {
+  padding-top: 50px;
+  background: #333;
+}
+
+.button-cen {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn{
+  border-radius: 0px;
+  border: none;
+  padding: 0px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  width: 120px;
+  height: 45px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-size: 200%;
+  color:#333;
+  background-color: white;
+  transition: 0.5s all ease;
+  overflow: hidden;
+  box-shadow: -0px 5px 30px rgba(0,0,0,0.5);
+  transform:  skew(0deg) translate(0,0);
+}
+
+.btn:focus,.btn:active:focus,
+.btn.active:focus,.btn.focus,
+.btn:active.focus,.btn.active.focus {  
+ outline: none;   
+ border-color: transparent;   
+ box-shadow:none;
+}
+
+.btn::before{
+outline: none;
+content: '';
+position: absolute;
+top: 10px;
+left: 0px;
+height: 100%;
+width: 0px;
+background: #b1b1b1;
+transform: 0.5s;
+transform: rotate(0deg) skewY(-45deg);
+}
+
+.btn::after{
+position: absolute;
+bottom: -20px;
+left: 0px;
+height: 0px;
+width: 100%;
+background: #b1b1b1;
+transform: 0.5s;
+transform: rotate(0deg) skewX(-45deg);
+}
+
+.btn:focus,.btn:focus:after{
+  outline: none;
+}
+
+.btn:hover{
+transform:  skew(0deg) translate(0px, -5px);
+box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+color: white;
+background-color: #dd4b39;
+}
+
+h1{
+  color: white;
+}
+p.lead{
+  color: #646d78;
+}
+
+
+
+#aboutModal > div > div > div.modal-footer > button{
+  background-color:#646d78;
+  width: 80px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-size: 200%;
+  color:white;
+  transition: 0.5s all ease;
+  overflow: hidden;
+}
+
+.container{
+  text-align: center;
+}
+
+.footer {
+  background-color: #444;
+}
+
+.lowroe{
+	padding-bottom: 10px;
+}
+
+.leftb{
+	text-align: left;
+}
+
+.rightb{
+	text-align: right;
+}
+
+ul {
+	position: relative;	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.form-inline{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+ul li a .fa {
+  font-size: 40px;
+  color: #333;
+  line-height: 	80px;
+  transition: 0.5s;
+  padding-right: 14px;
+}
+
+ul li a span {
+padding: 0;
+margin: 0;
+position: absolute;	
+top: 30px;	
+color: #333;	
+letter-spacing: 4px;	
+transition: 0.5s;
+}
+
+
+
+ul li a {
+text-decoration: none;
+display: absolute;
+display: block;	
+width: 180px;
+height: 80px;
+padding-left: 0px;
+margin-left: 50px;
+background: #fff;
+text-align: left;
+padding-left: 10px;
+transform:  skew(0deg) translate(0,0);
+transition: 0.5s;
+box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a:before {
+content: '';
+position: absolute;
+top: 10px;
+left: 0px;
+height: 100%;
+width: 0px;
+background: #b1b1b1;
+transform: 0.5s;
+transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a:after {
+content: '';
+position: absolute;
+bottom: -20px;
+left: 0px;
+height: 0px;
+width: 100%;
+background: #b1b1b1;
+transform: 0.5s;
+transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover{
+transform:  skew(0deg) translate(0px, -5px);
+box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+}
+
+ul li:hover .fa {
+color: #fff;
+}
+
+ul li:hover span {
+color: #fff;
+}
+
+ul li:hover a {
+background: #dd4b39;
+}
+
+ul li:hover a:before {
+background: #b33a2b;
+}
+
+ul li:hover a:after {
+background: #e66a5a;
+}
+
+.a{
+            position: relative;
+            top: 0px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            margin: 0 30px;
+        }
+        .c,.b{
+            font: 900 100px '';
+            line-height:200px;
+            position: absolute;
+            color: #dd4b39;
+            top: 0;
+            /* 使文字上下移动时有0.4s的过渡效果 */
+            transition: .4s;
+        }
+
+        .c{
+            /* 裁剪文字的上半部分，括号里的四个值分别是
+            top，right，bottom，left */
+            clip-path: inset(49% 0 0 0);
+        }
+        .b{
+            /* 裁剪文字的下半部分 */
+            clip-path: inset(1% 0 50% 0);
+        }
+        .a:hover .b,.a:hover .c{
+            /* 让--i为30的向上移动30px，-30的向下移动30px
+            这样子就能空出60px留给中间的超链接 */
+            top: calc(var(--i)*1px);
+        }
+        .a:hover .d{
+            opacity: 1;
+        }
+        .d{
+            text-decoration: none;
+            color: #e66a5a;
+            font: 100 20px '';
+            line-height: 190px;
+            opacity: 0;
+            transition: .3s;
+        }
+        .d:visited,.d:hover{
+          text-decoration: none;
+          color: #e66a5a;
+          font: 100 20px '';
+          line-height: 190px;
+          opacity: 0;
+          transition: .3s;
+      }
